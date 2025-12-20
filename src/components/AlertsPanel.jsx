@@ -1,5 +1,13 @@
 import AlertItem from "./AlertItem";
 import useEnergyMonitor from "./useEnergyMonitor";
+import { useWeather } from "../context/WeatherContext";
+
+
+
+const weather = useWeather();
+
+<AlertsPanel weatherTemp={weather?.temp} />
+
 
 const AlertsPanel = ({ weatherTemp }) => {
   const alerts = useEnergyMonitor(weatherTemp);

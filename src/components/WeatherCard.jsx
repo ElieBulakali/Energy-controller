@@ -1,20 +1,24 @@
-export default function WeatherCard() {
+import { useWeather } from "../context/WeatherContext";
+
+const WeatherCard = () => {
+  const weather = useWeather();
+
+  if (!weather) return null;
+
   return (
-    <div className="bg-slate-900/60 backdrop-blur-md p-6 rounded-2xl shadow-xl">
-      <p className="text-sm text-slate-400">Weather</p>
+    <div className="bg-white dark:bg-gray-900 p-4 rounded-xl shadow">
+      <h3 className="text-lg font-semibold mb-2">🌤 Weather</h3>
 
-      <div className="flex items-center justify-between mt-4">
-        <div>
-          <h3 className="text-3xl font-bold">24°C</h3>
-          <p className="text-slate-400">Partly Cloudy</p>
-        </div>
+      <p className="text-sm text-gray-500">{weather.city}</p>
 
-        <div className="text-4xl">⛅</div>
+      <p className="text-3xl font-bold mt-2">{weather.temp}°C</p>
+      <p className="text-sm">{weather.condition}</p>
+
+      <div className="flex justify-between text-sm mt-3">
+        <span>💧 {weather.humidity}%</span>
       </div>
-
-      <p className="mt-4 text-sm text-slate-500">
-        Kigali, Rwanda
-      </p>
     </div>
   );
-}
+};
+
+export default WeatherCard;
