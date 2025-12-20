@@ -30,10 +30,4 @@ export const WeatherProvider = ({ children }) => {
   );
 };
 
-export const useWeather = () => useContext(WeatherContext); {
-  const context = useContext(WeatherContext);
-  if (!context) {
-    throw new Error("useWeather must be used inside WeatherProvider");
-  }
-  return context;
-};
+export const useWeather = () => useContext(WeatherContext);

@@ -1,5 +1,5 @@
 import AlertItem from "./AlertItem";
-import useEnergyMonitor from "./useEnergyMonitor";
+import useEnergyMonitor from "../hooks/useEnergyMonitor";
 import { useWeather } from "../context/WeatherContext";
 
 
