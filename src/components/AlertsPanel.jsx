@@ -3,13 +3,10 @@ import useEnergyMonitor from "../hooks/useEnergyMonitor";
 import { useWeather } from "../context/WeatherContext";
 
 
-
-<AlertsPanel weatherTemp={weather?.temp} />
-
-
 const AlertsPanel = ({ weatherTemp }) => {
   const weather = useWeather();
-  const alerts = useEnergyMonitor(weatherTemp);
+  const temp = weatherTemp ?? weather?.temp;
+  const alerts = useEnergyMonitor(temp);
 
   return (
     <div className="bg-white dark:bg-gray-900 p-4 rounded-xl shadow">
