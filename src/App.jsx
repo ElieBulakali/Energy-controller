@@ -1,6 +1,7 @@
-import React from "react";
-import Dashboard from "./pages/Dashboard";
-
 export default function App() {
-  return <Dashboard />;
+  return (
+    <div style={{ color: "white", padding: 40 }}>
+      ENERGY CONTROLLER OK ✅
+    </div>
+  );
 }
