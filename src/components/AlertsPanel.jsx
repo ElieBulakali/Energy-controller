@@ -4,12 +4,11 @@ import { useWeather } from "../context/WeatherContext";
 
 
 
-const weather = useWeather();
-
 <AlertsPanel weatherTemp={weather?.temp} />
 
 
 const AlertsPanel = ({ weatherTemp }) => {
+  const weather = useWeather();
   const alerts = useEnergyMonitor(weatherTemp);
 
   return (
