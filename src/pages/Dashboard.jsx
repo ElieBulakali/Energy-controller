@@ -5,6 +5,8 @@ import Clock from "../components/Clock";
 import WeatherCard from "../components/WeatherCard";
 import StatCard from "../components/StatCard";
 import SystemStatus from "../components/SystemStatus";
+import AlertsPanel from "../components/AlertsPanel";
+
 
 export default function Dashboard() {
   return (
